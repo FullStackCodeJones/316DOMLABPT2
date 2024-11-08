@@ -1,44 +1,75 @@
+/* General reset for consistent styling */
 * {
-    box-sizing: border-box;
-  }
-  
-  /* CSS Custom Properties */
-  :root {
-    --main-bg: #4a4e4d;
-    --top-menu-bg: #0e9aa7;
-    --sub-menu-bg: #3da4ab;
-  }
-  
-  body {
-    font-family: Tahoma, Geneva, sans-serif;
-    height: 100vh;
-    margin: 0;
-    display: grid;
-    grid-template-rows: 3rem auto;
-    color: white;
-  }
-  
-  .flex-ctr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .flex-around {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  nav a {
-    line-height: 3rem;
-    padding: 0 1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-  }
-  
-  #top-menu a:hover {
-    background-color: var(--sub-menu-bg);
-  }
-  
+  box-sizing: border-box;
+}
+
+/* CSS Custom Properties */
+:root {
+  --main-bg: #4a4e4d;
+  --top-menu-bg: #0e9aa7;
+  --sub-menu-bg: #3da4ab;
+}
+
+/* Body styling */
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  color: white;
+  background-color: var(--main-bg);
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--main-bg);
+}
+
+/* Top Menu styling */
+#top-menu {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--top-menu-bg);
+  padding: 0.5rem;
+}
+
+#top-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+#top-menu a:hover {
+  background-color: var(--sub-menu-bg);
+}
+
+/* Sub Menu styling */
+#sub-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  background-color: var(--sub-menu-bg);
+  flex-direction: column;
+}
+
+#sub-menu a {
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+#sub-menu a:hover {
+  background-color: #f3f3f3;
+  color: black;
+}
+
+/* Main content area */
+main {
+  padding: 1rem;
+  text-align: center;
+}
